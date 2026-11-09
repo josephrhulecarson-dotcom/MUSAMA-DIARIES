@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d0d">
+  <meta name="description" content="Browse and save your MUSAMA Diaries photos in a private local gallery.">
+  <title>Photo Gallery | MUSAMA Diaries</title>
+  <link rel="icon" href="download (2).png" type="image/png">
+  <link rel="stylesheet" href="site.css">
+  <!-- Removed unsupported theme metadata -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html" aria-label="MUSAMA Diaries home"><img class="brand-logo" src="download (2).png" alt="MUSAMA Diaries logo"><span><strong>MUSAMA DIARIES</strong><small>Faith in every frame</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav-links" aria-label="Main navigation"><a href="index.html#about">Our story</a><a href="index.html#ministry">Ministry</a><a href="index.html#gallery">Gallery</a><a href="index.html#connect" class="nav-cta">Connect</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero"><div class="container"><p class="eyebrow">Memories & moments</p><h1>Photo gallery.</h1><p class="lead">Save and organize your Musama memories. Choose or drop photos to get started.</p></div></section>
+    <section class="container content-bottom">
+      <div class="photo-panel" data-gallery-root>
+        <input class="upload-input" type="file" accept="image/*" multiple data-photo-input aria-label="Choose photos to upload">
+        <div class="drop-zone" data-drop-zone><div class="drop-copy"><strong>Drop your photos here</strong><span>or choose image files · JPG, PNG, WebP · up to 15 MB each</span></div><button type="button" class="btn btn-primary" data-select-photos>Choose photos</button></div>
+        <div class="photo-tools"><input class="caption-field" type="text" maxlength="100" placeholder="Optional caption for selected photos" data-photo-caption aria-label="Photo caption"><select class="filter-select" data-photo-filter aria-label="Gallery category"><option value="all">All categories</option><option value="worship">Worship</option><option value="events">Events</option><option value="outreach">Outreach</option></select><button type="button" class="btn btn-secondary" data-upload-photos>Save photos</button></div>
+        <p class="photo-status" data-photo-status role="status" aria-live="polite">Select photos to add them to your gallery.</p>
+        <div class="gallery-grid" data-photo-grid aria-live="polite"></div>
+        <p class="storage-note">Photos are stored privately in this browser’s local database. They are not uploaded to a public website or shared with other visitors. Clearing browser data or switching devices may remove them—download copies you want to keep.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-row"><p>© <span id="year"></span> MUSAMA Diaries</p><p><a href="index.html">Return to home ↗</a></p></div></footer>
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
